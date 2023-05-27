@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Registration</h1>
-    <form action="login.php" method="post" onsubmit="return formValidation()">
+    <form action="config.php" method="post" onsubmit="return formValidation()">
         <table>
             <tr> 
                 <td><label for="fname">First Name:</label></td>
@@ -19,11 +19,11 @@
             </tr>
           <tr>
                 <td><label for="email">Email :</label></td>
-                <td><input type="email" name = "email" id="iemail"> </td>
+                <td><input type="email" name = "email" id="iemail"><span id="eemail"></span> </td>
             </tr>
             <tr>
                 <td><label for="mobile">Mobile :</label></td>
-                <td><input type="text" name = "mob" id="imob"> </td>
+                <td><input type="text" name = "mob" id="imob"> <span id="emob"></span></td>
             </tr>
             <tr>
                 <td><label for="pass">Password :</label></td>
@@ -31,9 +31,9 @@
             </tr>
             <tr>
                 <td><label for="confirm-pass">Confirm Password :</label></td>
-                <td><input type="password" name = "confirm-pass" id="iconfirm-pass"> </td>
+                <td><input type="password" name = "confirm-pass" id="iconfirm-pass"> <span id="econ-pass"></span></td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td><label for="certificate">Certificate :</label></td>
                 <td>
                     <input type="checkbox" name = "check-certificate" id="psc" value="PSC"><label>PSC</label>
@@ -41,7 +41,7 @@
                     <input type="checkbox" name = "check-certificate" id="ssc" value="SSC"><label>SSC</label>
                     <input type="checkbox" name = "check-certificate" id="hsc" value="HSC"><label>HSC</label>
                  </td>
-            </tr>
+            </tr> -->
             <tr>
                 <td><label for="gender">Gender :</label></td>
                 <td>
@@ -50,7 +50,7 @@
                     <input type="radio" name = "gender" value="others"><label>Others</label>
                 </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td><label for="board">Board Name :</label></td>
                 <td><select name="board-name" id="iboard-name">
                     <option value="choice one"> Select One </option> 
@@ -61,17 +61,17 @@
                     <option value="Barishal"> Barishal </option>
                     <option value="Chottogram"> Chottogram </option>
                 </td>
-            </tr>
+            </tr> -->
             <tr>
                 <td><label for="dob">Date Of Birth:</label></td>
                 <td><input type="date" name = "dob" id="idob"> </td>
-            </tr>
+            <!-- </tr>
             <tr>
                 <td><label for="pic-up">Upload Photo :</label></td>
                 <td>
                     <input type="file" name = "pic-upload">
                  </td>
-            </tr>
+            </tr> -->
             <tr>
                 <td colspan="2">
                     <input type="submit" id="sub-btn" name="submit-button" value="Register">
