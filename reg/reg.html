@@ -1,41 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Theory</title>
-    <script></script>
+    <link rel="stylesheet" href="reg.css">
+    <script src="validation.js"></script>
+    <title>Web Prroject</title>
 </head>
 <body>
-    <h1>Regstration</h1>
-    <form action="login.php" onsubmit="return formValidation()" method="post">
-    <table>
-        <tr>
-            <td><label for="Fname">First Name:</label> </td>
-            <td><input type="text" name="firstname" id="ifname" ><span id="efname">Error Space</span></td>
-        </tr>
-        <tr>
-            <td><label for="lname">Last Name:</label> </td>
-            <td><input type="text" name="lastname" id="ilname" ><span id="elname">Error Space</span></td>
-        </tr>
-        <tr>
-            <td><label for="Email">Email:</label> </td>
-            <td><input type="email" name="email" id="iemail" ><span id="eemail">Error Space</span></td>
-        </tr>
-        <tr>
-            <td><label for="Number">Number:</label> </td>
-            <td><input type="tel" name="number" id="inumber" ><span id="enumber">Error Space</span></td>
-        </tr>
-        <tr>
-            <td><label for="Number">Number:</label> </td>
-            <td><input type="tel" name="number" id="inumber" ><span id="enumber">Error Space</span></td>
-        </tr>
-    </table>
-    
-    
-    
-    
+    <h1>Registration</h1>
+    <form action="login.php" method="post" onsubmit="return formValidation()">
+        <table>
+            <tr> 
+                <td><label for="fname">First Name:</label></td>
+                <td><input type="text" name = "firstname" id="ifname"><span id="efname"></span> </td>
+            </tr> 
+            <tr>
+                <td><label for="lname">Last Name:</label></td>
+                <td><input type="text" name = "lastname" id="ilname"><span id="elname"></span> </td>
+            </tr>
+          <!-- <tr>
+                <td><label for="email">Email :</label></td>
+                <td><input type="email" name = "email" id="iemail"> </td>
+            </tr>
+            <tr>
+                <td><label for="mobile">Mobile :</label></td>
+                <td><input type="text" name = "mob" id="imob"> </td>
+            </tr>
+            <tr>
+                <td><label for="pass">Password :</label></td>
+                <td><input type="password" name = "pass" id="ipass"> </td>
+            </tr>
+            <tr>
+                <td><label for="confirm-pass">Confirm Password :</label></td>
+                <td><input type="password" name = "confirm-pass" id="iconfirm-pass"> </td>
+            </tr>
+            <tr>
+                <td><label for="certificate">Certificate :</label></td>
+                <td>
+                    <input type="checkbox" name = "check-certificate" id="psc" value="PSC"><label>PSC</label>
+                    <input type="checkbox" name = "check-certificate" id="jsc" value="JSC"><label>JSC</label>
+                    <input type="checkbox" name = "check-certificate" id="ssc" value="SSC"><label>SSC</label>
+                    <input type="checkbox" name = "check-certificate" id="hsc" value="HSC"><label>HSC</label>
+                 </td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender :</label></td>
+                <td>
+                    <input type="radio" name = "gender" value="male"><label>Male</label>
+                    <input type="radio" name = "gender" value="female"><label>Female</label>
+                    <input type="radio" name = "gender" value="others"><label>Others</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="board">Board Name :</label></td>
+                <td><select name="board-name" id="iboard-name">
+                    <option value="choice one"> Select One </option> 
+                    <option value="Dhaka"> Dhaka </option>
+                    <option value="Sylhet"> Sylhet </option>
+                    <option value="Cumilla"> Cumilla </option>
+                    <option value="Rajshahi"> Rajshahi </option>
+                    <option value="Barishal"> Barishal </option>
+                    <option value="Chottogram"> Chottogram </option>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date Of Birth:</label></td>
+                <td><input type="date" name = "dob" id="idob"> </td>
+            </tr>
+            <tr>
+                <td><label for="pic-up">Upload Photo :</label></td>
+                <td>
+                    <input type="file" name = "pic-upload">
+                 </td>
+            </tr> -->
+            <tr>
+                <td colspan="2">
+                    <input type="submit" id="sub-btn" name="submit-button" value="Register">
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>
