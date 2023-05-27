@@ -16,28 +16,28 @@
 
     if(strlen($r_username)<3 || strlen($r_username)>20){
         echo "<script>alert('User Name should be 3-20 char!!!!')</script>";
-        echo "<script>location.href='register.php'</script>";
+        echo "<script>location.href='Php/register.php'</script>";
     }
     else if(!preg_match($_email_pattern,$r_email)){
         echo "<script>alert('Invalid Email!!')</script>";
-        echo "<script>location.href='php/register.php'</script>";
+        echo "<script>location.href='Php/register.php'</script>";
     }
     else if(!preg_match($_mobile_pattern,$r_mobile)){
         echo "<script>alert('Invalid Mobile Number!!')</script>";
-        echo "<script>location.href='php/register.php'</script>";
+        echo "<script>location.href='Php/register.php'</script>";
     }
 
     else if($r_pass !== $r_con_pass){
         echo "<script>alert('Pass and con-pass is not matching!!')</script>";
-        echo "<script>location.href='php/register.php'</script>";
+        echo "<script>location.href='Php/register.php'</script>";
     }
     else if(mysqli_num_rows($duplicate_username)>0){
         echo "<script>alert('username already taken!!')</script>";
-        echo "<script>location.href='php/register.php'</script>";
+        echo "<script>location.href='Php/register.php'</script>";
     }
     else if(mysqli_num_rows($duplicate_email)>0){
         echo "<script>alert('email already taken!!')</script>";
-        echo "<script>location.href='php/register.php'</script>";
+        echo "<script>location.href='Php/register.php'</script>";
     }
     else{
         if(!mysqli_query($conn,$insert_query)){
@@ -45,6 +45,6 @@
         }
         else{
             echo "<script>alert('Inserted!!')</script>";
-            echo "<script>location.href='php/login.php'</script>";
+            echo "<script>location.href='Php/login.php'</script>";
         }  
     }

@@ -8,12 +8,12 @@ if(isset($_POST['login'])){
     if(mysqli_num_rows($result)>0){
         session_start();
         $_SESSION['username'] = $l_username; //session create
-        echo "<script>location.href='php/home.php'</script>";
+        echo "<script>location.href='Php/home.php'</script>";
         
     }
     else{
         echo "<script>alert('Invalid username and Password!!')</script>";
-        echo "<script>location.href='php/login.php'</script>";
+        echo "<script>location.href='Php/login.php'</script>";
     }
 }
 
