@@ -19,7 +19,7 @@
     <div class="conatiner-fluid">
         <div class="row justify-content-center mt-5">
             <div class="col-lg-4 col-md-6 col-sm-12">
-                <form action="loginAction.php" method="post">
+                <form action="php/loginAction.php" method="post">
                     <div class="mb-3">
                            <h3>Login Form</h3> 
                     </div>
@@ -34,7 +34,7 @@
                     </div>
                     
                     <button type="submit" class="btn btn-primary col-12" name="login">Login</button>
-                    <a href="register.php">Register here</a>
+                    <a href="php/register.php">Register here</a>
                 </form>
             </div>
         </div>
