@@ -1,8 +1,8 @@
-<?php
+<!-- <?php
     session_start();
     if(isset($_SESSION['l_username']))
 
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
