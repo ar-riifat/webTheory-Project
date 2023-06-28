@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-    <div class="conatiner-fluid">
+    <div class="container-fluid">
         <div class="row justify-content-center mt-5">
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <form action="registerAction.php" method="post">
@@ -24,26 +24,51 @@
                            <h3>Register Form</h3> 
                     </div>
                     <div class="mb-3">
+                      Full Name : 
+                      <input type="text" class="form-control" name = "r_fullname" Required>
+                    </div>
+                    <div class="mb-3">
                       username : 
-                      <input type="text" class="form-control" name = "r_username">
+                      <input type="text" class="form-control" name = "r_username" Required>
                       
                     </div>
                     <div class="mb-3">
                       Password :
-                      <input type="text" class="form-control" name="r_pass">
+                      <input type="text" class="form-control" name="r_pass" Required>
                     </div>
                     <div class="mb-3">
                       Confirm Password :
-                      <input type="text" class="form-control" name="r_con_pass">
+                      <input type="text" class="form-control" name="r_con_pass" Required>
                     </div>
+
                     <div class="mb-3">
                       Email :
-                      <input type="text" class="form-control" name="r_email">
+                      <input type="text" class="form-control" name="r_email" Required>
+                    </div>
+                    <div class="mb-3">
+                        Date of Birth
+                        <input type="text" class="form-control" name="r_dob" Required>
                     </div>
                     <div class="mb-3">
                       mobile :
-                      <input type="tel" class="form-control" name="r_mobile">
+                      <input type="tel" class="form-control" name="r_mobile" Required>
                     </div>
+                    <div>
+                        Gender:
+                        <input type="radio" name="gender"
+                            onchange="document.getElementsByName('r_gender')[0].value = this.value" value="Male"
+                            Required>
+                        <span>Male</span>
+                        <input type="radio" name="gender"
+                            onchange="document.getElementsByName('r_gender')[0].value = this.value"
+                            value="Female" Required>
+                        <span>Female</span>
+                        <input type="radio" name="gender"
+                            onchange="document.getElementsByName('r_gender')[0].value = this.value"
+                            value="Others" Required>
+                        <span>Others</span>
+                        <input type="hidden" name="r_gender">
+                    </div> <br>
                    
                     <button type="submit" class="btn btn-primary col-12" name="submit">Register</button>
                     <a href="login.php">login here</a>
