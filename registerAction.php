@@ -19,7 +19,7 @@
         
         
 
-        $insert_query ="INSERT INTO `register`(`db_fullname`, `db_username`, `db_email`, `db_mobile`, `db_pass`) VALUES ('$r_fullname','$r_username','$r_email','$r_mobile','$r_pass')";
+        $insert_query ="INSERT INTO `register`(`db_fullname`, `db_username`, `db_email`,`db_dob`, `db_mobile`, `db_pass`,`db_gender`) VALUES ('$r_fullname','$r_username','$r_email','$r_mobile','$r_pass')";
         $duplicateUsernameQuery="SELECT * FROM `register` WHERE username='$r_username'";
 
         $duplicate_username = mysqli_query($conn,$insert_query);
