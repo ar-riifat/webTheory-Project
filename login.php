@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-    <div class="conatiner-fluid">
+    <div class="container-fluid">
         <div class="row justify-content-center mt-5">
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <form action="loginAction.php" method="post">

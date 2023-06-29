@@ -25,7 +25,7 @@
                     </div>
                     <div class="mb-3">
                       Full Name : 
-                      <input type="text" class="form-control" name = "r_fullname" Required>
+                      <input type="text" class="form-control" name = "r_fullName" Required>
                     </div>
                     <div class="mb-3">
                       username : 
@@ -47,7 +47,7 @@
                     </div>
                     <div class="mb-3">
                         Date of Birth
-                        <input type="text" class="form-control" name="r_dob" Required>
+                        <input type="date" class="form-control" name="r_dob" Required>
                     </div>
                     <div class="mb-3">
                       mobile :
