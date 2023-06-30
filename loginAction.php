@@ -23,7 +23,7 @@ if (isset($_POST['login'])) {
     $l_username = $_POST['l_username'];
     $l_pass = $_POST['l_pass'];
 
-    $result = mysqli_query($conn, "SELECT * FROM `register` WHERE db_username='$l_username' AND db_pass='$l_pass'");
+    $result = mysqli_query($conn, "SELECT * FROM `registered` WHERE db_username='$l_username' AND db_pass='$l_pass'");
 
     if (!$result) {
         echo "Query execution failed: " . mysqli_error($conn);

@@ -2,10 +2,10 @@
         include "config.php";
 
             $_mobile_pattern = "/(\+88)?-?01[3-9]\d{8}/";
-            $_username_pattern = "/^(?=.*[a-z])(?=.*\d)[a-z\d!@#$%^&*_\-]{5,10}$/";
+            $_username_pattern = "/^[a-zA-Z0-9_-]{3,16}$/";
             $_email_pattern = "/(cse|eee|ce)_\d{10}@lus\.ac\.bd/";
             $_pass_pattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,15}$/";
-            $_dob_pattern = "/^(0[1-9]|[1-2][0-9]|3[0-1])-(0[1-9]|1[0-2])-(19|20)\d{2}$/";
+            $_dob_pattern = "/^(0[1-9]|[12]\d|3[01])-(0[1-9]|1[0-2])-(19|20)\d{2}$/";
 
         $r_fullName = $_POST['r_fullName'];
         $r_username = $_POST['r_username'];
@@ -19,7 +19,7 @@
         
         
 
-        $insert_query ="INSERT INTO `registered`(`db_fullName`, `db_username`, `db_email`,`db_dob`, `db_mobile`, `db_pass`,`db_gender`) VALUES ('$r_fullName','$r_username','$r_email','$r_dob','$r_mobile','$r_pass','$r_gender')";
+        $insert_query ="INSERT INTO `registered`(`db_fullName`, `db_username`, `db_email`, `db_dob`, `db_mobile`, `db_pass`, `db_gender`) VALUES ('$r_fullName','$r_username','$r_email','$r_dob','$r_mobile','$r_pass','$r_gender')";
         $duplicateUsernameQuery="SELECT * FROM `registered` WHERE username='$r_username'";
 
         $duplicate_username = mysqli_query($conn,$insert_query);
