@@ -1,21 +1,4 @@
- <!-- <?php
-session_start();
-$username="ar_riffat";
-$pass="admin";
 
-$input_username = $_POST['l_username'];
-$input_username = $_POST['l_pass'];
-
-if($input_username == $username && $input_pass==$pass){
-    $_SESSION['l_username']=$username;
-    echo "<script> location.href = 'product.php' </script>";
-}
-else{
-    echo "<script>alert('Invalid Username & Password')</script>";
-    echo "<script> location.href = 'login.php' </script>";
-}
-
-?>  -->
 
 <?php
 if (isset($_POST['login'])) {
@@ -36,6 +19,9 @@ if (isset($_POST['login'])) {
             echo "<script>alert('Invalid username and password!')</script>";
             echo "<script>location.href='login.php'</script>";
         }
+    }
+    else{
+        echo "<script>location.href='login.php'</script>";
     }
 }
 ?>

@@ -20,17 +20,15 @@
         
 
         $insert_query ="INSERT INTO `registered`(`db_fullName`, `db_username`, `db_email`, `db_dob`, `db_mobile`, `db_pass`, `db_gender`) VALUES ('$r_fullName','$r_username','$r_email','$r_dob','$r_mobile','$r_pass','$r_gender')";
-        $duplicateUsernameQuery="SELECT * FROM `registered` WHERE username='$r_username'";
-
-        $duplicate_username = mysqli_query($conn,$insert_query);
 
         $duplicate_username = mysqli_query($conn,"SELECT * FROM `registered` WHERE username='$r_username'");
         $duplicate_email = mysqli_query($conn,"SELECT * FROM `registered` WHERE email='$r_email'");
 
-    if(!mysqli_query($conn,$insert_query)){
-        echo "<script>alert('Not Inserted!!')</script>";
-        echo "<script>location.href = 'register.php'</script>";
+    if(strlen($r_username)<3 || strlen ($r_username)>20){
+        echo "<script>alert('User Name should be 3-20 char!!!!')</script>";
+        echo "<script>location.href='Php/register.php'</script>";
     }
+   
     if (!preg_match($_username_pattern, $r_username)) { 
         echo "<script>alert('Invalid Username!!')</script>";
         echo "<script>location.href='register.php'</script>";
@@ -39,6 +37,13 @@
     if(!preg_match($_email_pattern,$r_email)){
             echo "<script>alert('Use Only LUS Email!!')</script>";
             echo "<script>location.href='register.php'</script>";
+        }
+    if (mysqli_num_rows($duplicate_username) > 0) { //duplicate username check from db
+            echo "<script>alert('This Username is already taken!!!!')</script>";
+            echo "<script>location.href='register.php'</script>"; 
+        // } else if (mysqli_num_rows($duplicate_email) > 0) { //duplicate email check from db
+        //     echo "<script>alert('This email is already taken..!!')</script>";
+        //     echo "<script>location.href='register.php'</script>";
         }
         else if (!preg_match($_dob_pattern, $r_dob)) { //DOB check
             echo "<script>alert('Invalid Date of Birth..!!')</script>";
@@ -57,6 +62,10 @@
         echo "<script>alert('Pass and con-pass is not matching!!')</script>";
         echo "<script>location.href='register.php'</script>";
         }
+    if(!mysqli_query($conn,$insert_query)){
+        echo "<script>alert('Not Inserted!!')</script>";
+        echo "<script>location.href = 'register.php'</script>";
+    }
 
     else{
         echo "<script>alert('Your Account Successfully Register!!')</script>";

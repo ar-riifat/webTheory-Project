@@ -25,7 +25,7 @@
                     </div>
                     <div class="mb-3">
                       username : 
-                      <input type="text" class="form-control" name = "l_username">
+                      <input type="text" class="form-control" placeholder="Username" name = "l_username">
                       
                     </div>
                     <div class="mb-3">
@@ -34,7 +34,7 @@
                     </div>
                     
                     <button type="submit" class="btn btn-primary col-12" name="login">Login</button>
-                    <a href="register.php">Register here</a>
+                    <a href="register.php">Not a member yet?  Register here</a>
                 </form>
             </div>
         </div>
