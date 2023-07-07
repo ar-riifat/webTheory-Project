@@ -26,7 +26,7 @@
 
     if(strlen($r_username)<3 || strlen ($r_username)>20){
         echo "<script>alert('User Name should be 3-20 char!!!!')</script>";
-        echo "<script>location.href='Php/register.php'</script>";
+        echo "<script>location.href='register.php'</script>";
     }
    
     if (!preg_match($_username_pattern, $r_username)) { 
@@ -38,13 +38,13 @@
             echo "<script>alert('Use Only LUS Email!!')</script>";
             echo "<script>location.href='register.php'</script>";
         }
-    if (mysqli_num_rows($duplicate_username) > 0) { //duplicate username check from db
-            echo "<script>alert('This Username is already taken!!!!')</script>";
-            echo "<script>location.href='register.php'</script>"; 
-        // } else if (mysqli_num_rows($duplicate_email) > 0) { //duplicate email check from db
-        //     echo "<script>alert('This email is already taken..!!')</script>";
-        //     echo "<script>location.href='register.php'</script>";
-        }
+    // if (mysqli_num_rows($duplicate_username) > 0) { //duplicate username check from db
+    //         echo "<script>alert('This Username is already taken!!!!')</script>";
+    //         echo "<script>location.href='register.php'</script>"; 
+    //     } else if (mysqli_num_rows($duplicate_email) > 0) { //duplicate email check from db
+    //         echo "<script>alert('This email is already taken..!!')</script>";
+    //         echo "<script>location.href='register.php'</script>";
+    //     }
         else if (!preg_match($_dob_pattern, $r_dob)) { //DOB check
             echo "<script>alert('Invalid Date of Birth..!!')</script>";
             echo "<script>location.href='register.php'</script>";

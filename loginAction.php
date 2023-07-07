@@ -14,14 +14,14 @@ if (isset($_POST['login'])) {
         if (mysqli_num_rows($result) > 0) {
             session_start();
             $_SESSION['username'] = $l_username; 
-            echo "<script>location.href='home.php'</script>";
+            echo "<script>location.href='./curd/index.php'</script>";
         } else {
             echo "<script>alert('Invalid username and password!')</script>";
             echo "<script>location.href='login.php'</script>";
         }
     }
-    else{
-        echo "<script>location.href='login.php'</script>";
-    }
+        // else {
+        //     echo "<script>location.href='login.php'</script>";
+        // }
 }
 ?>
