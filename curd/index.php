@@ -28,13 +28,14 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="http://localhost/rifat/product.php">About</a>
+            <a class="nav-link" href="http://localhost/rifat/product.php">Product</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="http://localhost/rifat/card/index.php">Contact Us</a>
+            <a class="nav-link" href="http://localhost/rifat/card/index.php">Food Portal</a>
             </li>
 
         </ul>
+
             </div>
     </nav>
 
@@ -99,6 +100,20 @@
         
         <?php
         include('conn.php');
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if(isset($_SESSION['username'])){
+            echo "welcome ". $_SESSION['username'];
+            echo "<br><a href='http://localhost/rifat/logout.php'><input type='button' value='logout' name='logout'></a>";
+        }
+    
+        else{
+            echo "<script>alert('First Login to Access Homepage!!')</script>";
+            echo "<script>location.href='http://localhost/rifat/login.php'</script>";
+            
+        }
         $sqlSelect = "SELECT * FROM hospital";
         $result = mysqli_query($conn,$sqlSelect);
         while($data = mysqli_fetch_array($result)){

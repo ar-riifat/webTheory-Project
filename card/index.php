@@ -90,22 +90,19 @@
     </tr>
   </thead>
   <tbody>
-        <?php
-     include 'config.php';
-     $allData = mysqli_query($conn, "SELECT * FROM `product` ")
-     while($row = mysqli_fetch_array($allData))  
-     ?>  
-       <tr>
-        <?php
-                <td>$row['id']</td>
-                <td>$row['name']</td>
-                <td>$row['decription']</td>
-                <td>$row['price']</td>
-                <td><img src='$row[images]' alt='images' width='100px'</td>
-                <td><a class = 'btn btn-danger' href= ""</td>
-                ?>
-            </tr>
-        
+
+
+              <tr>
+                  <td>$row['id']</td>
+                  <td>$row['name']</td>
+                  <td>$row['decription']</td>
+                  <td>$row['price']</td>
+                  <td><img src='$row[images]' alt='images' width='100px'</td>
+                  <td><a class='btn btn-danger' href=''></td>
+                  <td><a class='btn btn-warning' href='update.php?id=$row[id]'>Update</a></td>
+                  <td><a class='btn btn-warning' href='delete.php?id=$row[id]'>Delete</a></td>
+              </tr>
+
 
   </tbody>
 </table>
