@@ -45,15 +45,15 @@
                       Email :
                       <input type="text" class="form-control" name="r_email" Required>
                     </div>
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         Date of Birth
                         <input type="text" class="form-control" name="r_dob" Required>
-                    </div>
+                    </div> -->
                     <div class="mb-3">
                       mobile :
                       <input type="tel" class="form-control" name="r_mobile" Required>
                     </div>
-                    <div>
+                    <!-- <div>
                         Gender:
                         <input type="radio" name="gender"
                             onchange="document.getElementsByName('r_gender')[0].value = this.value" value="Male"
@@ -68,7 +68,7 @@
                             value="Others" Required>
                         <span>Others</span>
                         <input type="hidden" name="r_gender">
-                    </div> <br>
+                    </div> <br> -->
                    
                     <button type="submit" class="btn btn-primary col-12" name="submit">Register</button>
                     <a href="login.php">login here</a>
